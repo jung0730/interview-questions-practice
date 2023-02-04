@@ -15,7 +15,6 @@ function deepClone(obj) {
   // 所以不用透過 obj.hasOwnProperty(key) 額外檢查是不是非原型鏈上的屬性
   // ref: https://stackoverflow.com/questions/12735778/for-in-and-hasownproperty
   for (const [key, value] of Object.entries(obj)) {
-    console.log(key, value, 'key - value')
     result[key] = deepClone(value);
   }
   return result
