@@ -11,6 +11,7 @@ function deepClone(obj) {
   }
   let result = Array.isArray(obj) ? [] : {};
 
+  // 透過 Ojbect.entries 來迭代，然後遞迴地對每個值深拷貝
   // 因為 Object.entries 不會列舉整個原型鍊 (prototype chain)
   // 所以不用透過 obj.hasOwnProperty(key) 額外檢查是不是非原型鏈上的屬性
   // ref: https://stackoverflow.com/questions/12735778/for-in-and-hasownproperty
@@ -25,5 +26,4 @@ const obj = {
   b: { c: 3 },
 };
 
-// console.log(deepClone(obj))
-deepClone(obj)
+console.log(deepClone(obj));
