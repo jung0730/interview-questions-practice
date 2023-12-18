@@ -1,4 +1,5 @@
 // 當一定時間內沒有持續觸發事件時，事件處理函式才會被執行一次，但如果在設定的時間內又一次觸發了事件，就會重新開始計時。
+// 如user一直滑動，函式就不會被觸發，這時可以改用throttle
 function debounce(fn, delay = 500) {
   let timer;
   return (...args) => {
