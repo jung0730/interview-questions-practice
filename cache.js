@@ -3,7 +3,7 @@ function cached(fn) {
   return (...args) => {
     // create a unique key for caching purposes
     const key = JSON.stringify(args);
-    if (key in cache) { // in 會找prototype chain, Object.hasOwnProperty不會
+    if (key in cache) { // in 會找prototype chain, Object.hasOwnProperty不會, both works here fine
       return cache[key];
     } else {
       const val = fn(...args);
