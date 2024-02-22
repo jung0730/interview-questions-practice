@@ -29,4 +29,14 @@ const updateDebounceText = debounce((text) => {
   console.log(`call api get search result ${text}`);
 }, 500);
 
-console.log(updateDebounceText('foo'));
+
+function sayHello() {
+  console.log('My name is', this.name)
+}
+
+const amy = {
+  name: 'amy',
+  speak: debounce(sayHello),
+}
+
+console.log(amy.speak())
