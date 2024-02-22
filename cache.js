@@ -13,14 +13,14 @@ function cached(fn) {
   };
 }
 
-function expensiveOperation(n) {
+function expensiveOperation(n, x) {
   // console.log(`Performing expensive operation for ${n}`);
   return n * 2;
 }
 
 const cachedExpensiveOperation = cached(expensiveOperation);
 // Call the cached function
-console.log(cachedExpensiveOperation(3)); // This will perform the operation and log the message
+console.log(cachedExpensiveOperation(3, 4)); // This will perform the operation and log the message
 console.log(cachedExpensiveOperation(3)); // This will use the cached result and not perform the operation again
 console.log(cachedExpensiveOperation(5)); // This will perform the operation for a different argument
 console.log(cachedExpensiveOperation(5)); // This will use the cached result for the second set of arguments
