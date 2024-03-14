@@ -5,9 +5,6 @@ function binarySearch(nums, target) {
   let right = nums.length -1
   while (left <= right) {
     let mid = Math.round((left + right) / 2)
-    console.log(left, 'left')
-    console.log(right, 'right')
-    console.log(mid, 'mid')
     if (target === nums[mid]) {
       return mid
     }
