@@ -1,5 +1,6 @@
 // 需將數列先排序
 // 每次由中間將數列切成兩邊，比對數列的中間值，如果小於再比前半段，大於再比後半段，直到找到或是數列清空為止
+// 時間複雜度 logn
 function binarySearch(nums, target) {
   let left = 0
   let right = nums.length -1
