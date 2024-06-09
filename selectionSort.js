@@ -1,5 +1,5 @@
 // works great in small array
-// time complexity of O(n2)
+// time complexity of O(n^2)
 // 找到最小值，移到最左邊
 
 function selectionSort(arr) {
